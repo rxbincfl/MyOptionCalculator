@@ -1,0 +1,14 @@
+﻿Control: ComboBox
+
+Properties:
+
+Name : Leg1Type
+Location : 3,15
+Size : 82,21
+Text : Long Call
+Items :
+Long Call
+Long Put
+Short Call
+Short Put
+Stock

@@ -1,0 +1,10 @@
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.exe.config
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.exe
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.pdb
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.xml
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.Form1.resources
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.Resources.resources
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.vbproj.GenerateResource.Cache
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.exe
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.xml
+E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.pdb
