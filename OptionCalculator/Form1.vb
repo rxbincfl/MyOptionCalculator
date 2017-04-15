@@ -7,4 +7,12 @@
         Me.Close()
 
     End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Leg1Value_TextChanged(sender As Object, e As EventArgs) Handles Leg1Value.TextChanged
+
+    End Sub
 End Class

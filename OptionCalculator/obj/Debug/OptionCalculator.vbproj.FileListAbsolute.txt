@@ -8,3 +8,14 @@ E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalcu
 E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.exe
 E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.xml
 E:\Dropbox\Work\Projects\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.pdb
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.exe.config
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.exe
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.pdb
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.xml
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.vbprojResolveAssemblyReference.cache
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.Form1.resources
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.Resources.resources
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.vbproj.GenerateResource.Cache
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.exe
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.xml
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.pdb
