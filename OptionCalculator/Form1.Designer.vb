@@ -47,6 +47,12 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ImpliedVol = New System.Windows.Forms.NumericUpDown()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Dividends = New System.Windows.Forms.NumericUpDown()
+        Me.InterestRate = New System.Windows.Forms.NumericUpDown()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Messages = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.Leg1IV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Leg1StrikePrice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,6 +61,9 @@ Partial Class Form1
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.ImpliedVol, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
+        CType(Me.Dividends, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InterestRate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -79,7 +88,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Leg1EntryDate)
         Me.Panel1.Controls.Add(Me.Leg1Contracts)
         Me.Panel1.Controls.Add(Me.Leg1Type)
-        Me.Panel1.Location = New System.Drawing.Point(12, 70)
+        Me.Panel1.Location = New System.Drawing.Point(38, 225)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1087, 60)
         Me.Panel1.TabIndex = 1
@@ -179,7 +188,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(12, 12)
+        Me.Panel2.Location = New System.Drawing.Point(38, 167)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1087, 52)
         Me.Panel2.TabIndex = 2
@@ -314,11 +323,76 @@ Partial Class Form1
         Me.ImpliedVol.TabIndex = 12
         Me.ImpliedVol.Value = New Decimal(New Integer() {1, 0, 0, 131072})
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Messages)
+        Me.Panel4.Controls.Add(Me.Label12)
+        Me.Panel4.Controls.Add(Me.Label11)
+        Me.Panel4.Controls.Add(Me.Dividends)
+        Me.Panel4.Controls.Add(Me.InterestRate)
+        Me.Panel4.Location = New System.Drawing.Point(38, 101)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1087, 60)
+        Me.Panel4.TabIndex = 3
+        '
+        'Dividends
+        '
+        Me.Dividends.DecimalPlaces = 2
+        Me.Dividends.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.Dividends.Location = New System.Drawing.Point(355, 29)
+        Me.Dividends.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
+        Me.Dividends.Minimum = New Decimal(New Integer() {1, 0, 0, 65536})
+        Me.Dividends.Name = "Dividends"
+        Me.Dividends.Size = New System.Drawing.Size(49, 22)
+        Me.Dividends.TabIndex = 3
+        Me.Dividends.Value = New Decimal(New Integer() {1, 0, 0, 65536})
+        '
+        'InterestRate
+        '
+        Me.InterestRate.DecimalPlaces = 3
+        Me.InterestRate.Location = New System.Drawing.Point(129, 31)
+        Me.InterestRate.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
+        Me.InterestRate.Minimum = New Decimal(New Integer() {5, 0, 0, 196608})
+        Me.InterestRate.Name = "InterestRate"
+        Me.InterestRate.Size = New System.Drawing.Size(49, 22)
+        Me.InterestRate.TabIndex = 1
+        Me.InterestRate.Value = New Decimal(New Integer() {5, 0, 0, 196608})
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(22, 17)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(89, 34)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "Risk Free" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Interest Rate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(184, 31)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(140, 17)
+        Me.Label12.TabIndex = 14
+        Me.Label12.Text = "$ per share Dividend"
+        '
+        'Messages
+        '
+        Me.Messages.ForeColor = System.Drawing.Color.Red
+        Me.Messages.Location = New System.Drawing.Point(494, 31)
+        Me.Messages.Name = "Messages"
+        Me.Messages.Size = New System.Drawing.Size(398, 22)
+        Me.Messages.TabIndex = 15
+        Me.Messages.Text = "Sample Message"
+        Me.Messages.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1582, 853)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
@@ -334,6 +408,10 @@ Partial Class Form1
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         CType(Me.ImpliedVol, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        CType(Me.Dividends, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InterestRate, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -363,4 +441,10 @@ Partial Class Form1
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents ImpliedVol As NumericUpDown
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Dividends As NumericUpDown
+    Friend WithEvents InterestRate As NumericUpDown
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Messages As TextBox
 End Class
