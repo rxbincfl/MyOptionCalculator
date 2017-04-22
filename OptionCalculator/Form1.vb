@@ -1,32 +1,83 @@
 ﻿Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Friend leg1 As EquityOption
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim dt As Date = startupdate()
+        Leg1ExpirationDate.Value = dt
+        Messages.Text = "Reminder: Double-Click any number to change it quickly"
+        Messages.ForeColor = Color.Blue
     End Sub
 
-    Sub TestNames()
+    Private Sub FindButtonsHandler(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles B_FindPrice.Click, B_FindIV.Click
+        createlegs()
+        If checkdates() = True Then
+            If sender.name = "B_FindPrice" Then
+                setprices()
+                If Dividends.Value > 0 Then
+                    Messages.Text = "Option Prices on Dividend Paying stocks are approximate"
+                Else
+                    Messages.Text = "Option Price calculated from IV"
+                End If
+            Else
+                setvolatility()
+                If Dividends.Value > 0 Then
+                    Messages.Text = "Option Prices on Dividend Paying stocks are approximate"
+                Else
+                    Messages.Text = "IV calculated from Option Price"
+                End If
+            End If
+            setvalues()
+            Messages.ForeColor = Color.DarkGreen
+        Else
+            setzeros()
+            Messages.ForeColor = Color.Red
+            Messages.Text = "Expiration date is on or before the Entry date"
+        End If
+    End Sub
 
-        'this sub does not actually do anything, it just tests that you have the correct names for the various controls
-        'if you see a name such as "Leg1Type" underlined with a blue squiggly line below, it probably means you misspelled the name of the control
-        'change the name of the control in the Properties window to match what is shown below
-        'do not change the names below - they are the correct names, which MUST be used in order for all functions to work
+    Private Sub ChangeExp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Leg1ExpPrev.Click, Leg1ExpNext.Click
+        Dim direction As Integer = 1
+        If sender.name.contains("Prev") Then
+            direction = -1
+        End If
+        Leg1ExpirationDate.Value = changeexpiration(Leg1ExpirationDate.Value, direction)
+    End Sub
 
-        'a blue squiggly line can also indicate that you added the wrong type of control
-        'for instance, Leg1Contracts is supposed to be a NumericUpDown control
-        'if you added it as a TextBox instead, there will be a blue squiggly line under all of "Leg1Contracts.Value", not just the name
+    Private Sub createlegs()
+        'each option leg belongs to the EquityOption class
+        leg1 = New EquityOption(Leg1Type.Text, Leg1Contracts.Value, Leg1EntryDate.Value, Leg1StockPrice.Value, Leg1StrikePrice.Value, Leg1ExpirationDate.Value, Leg1OptionPrice.Value, Leg1IV.Value, True, InterestRate.Value, Dividends.Value)
+    End Sub
 
-        Dim txt As String = Leg1Type.Text
-        Dim int As Integer = Leg1Contracts.Value
-        Dim sng As Single = Leg1StockPrice.Value
-        sng = Leg1StrikePrice.Value
-        Dim dt As Date = Leg1EntryDate.Value
-        dt = Leg1ExpirationDate.Value
-        sng = Leg1OptionPrice.Value
-        sng = Leg1OptionPrice.Value
-        txt = Leg1Value.Text
-        sng = InterestRate.Value
-        sng = Dividends.Value
-        txt = Messages.Text
+    Private Function checkdates() As Boolean
+        Return leg1.expirationafterentry
+    End Function
 
+    Function startupdate() As Date
+        Dim dt As Date = changeexpiration(Now.Date, 0)
+        If DateDiff(DateInterval.Day, Now.Date, dt) > 0 Then
+            Return dt
+        Else
+            Return changeexpiration(Now.Date, 1)
+        End If
+    End Function
+
+    Private Sub setprices()
+        Leg1OptionPrice.Value = leg1.price
+    End Sub
+
+    Private Sub setvolatility()
+        Leg1IV.Value = leg1.volatility
+    End Sub
+
+    Private Sub setvalues()
+        Leg1Value.Text = leg1.totalvalue(Leg1OptionPrice.Value)
+        Leg1Value.BackColor = leg1.colorize
+    End Sub
+
+    Private Sub setzeros()
+        Leg1Value.Text = FormatCurrency(0)
+        Leg1Value.BackColor = Color.Gray
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

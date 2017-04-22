@@ -24,7 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ImpliedVol = New System.Windows.Forms.NumericUpDown()
+        Me.Leg1IV = New System.Windows.Forms.NumericUpDown()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Leg1ExpNext = New System.Windows.Forms.Button()
         Me.Leg1ExpPrev = New System.Windows.Forms.Button()
@@ -53,8 +53,11 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Dividends = New System.Windows.Forms.NumericUpDown()
         Me.InterestRate = New System.Windows.Forms.NumericUpDown()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.B_FindPrice = New System.Windows.Forms.Button()
+        Me.B_FindIV = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.ImpliedVol, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Leg1IV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.Leg1OptionPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Leg1StrikePrice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +67,7 @@ Partial Class Form1
         Me.Panel4.SuspendLayout()
         CType(Me.Dividends, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InterestRate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -79,7 +83,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.ImpliedVol)
+        Me.Panel1.Controls.Add(Me.Leg1IV)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Leg1Value)
         Me.Panel1.Controls.Add(Me.Leg1OptionPrice)
@@ -95,17 +99,17 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(1223, 75)
         Me.Panel1.TabIndex = 1
         '
-        'ImpliedVol
+        'Leg1IV
         '
-        Me.ImpliedVol.DecimalPlaces = 2
-        Me.ImpliedVol.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
-        Me.ImpliedVol.Location = New System.Drawing.Point(1006, 24)
-        Me.ImpliedVol.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ImpliedVol.Minimum = New Decimal(New Integer() {1, 0, 0, 131072})
-        Me.ImpliedVol.Name = "ImpliedVol"
-        Me.ImpliedVol.Size = New System.Drawing.Size(66, 26)
-        Me.ImpliedVol.TabIndex = 12
-        Me.ImpliedVol.Value = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.Leg1IV.DecimalPlaces = 2
+        Me.Leg1IV.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.Leg1IV.Location = New System.Drawing.Point(1006, 24)
+        Me.Leg1IV.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Leg1IV.Minimum = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.Leg1IV.Name = "Leg1IV"
+        Me.Leg1IV.Size = New System.Drawing.Size(66, 26)
+        Me.Leg1IV.TabIndex = 12
+        Me.Leg1IV.Value = New Decimal(New Integer() {1, 0, 0, 131072})
         '
         'Panel3
         '
@@ -406,11 +410,43 @@ Partial Class Form1
         Me.InterestRate.TabIndex = 1
         Me.InterestRate.Value = New Decimal(New Integer() {5, 0, 0, 196608})
         '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.B_FindIV)
+        Me.Panel5.Controls.Add(Me.B_FindPrice)
+        Me.Panel5.Location = New System.Drawing.Point(43, 378)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1223, 75)
+        Me.Panel5.TabIndex = 13
+        '
+        'B_FindPrice
+        '
+        Me.B_FindPrice.BackColor = System.Drawing.Color.Salmon
+        Me.B_FindPrice.Location = New System.Drawing.Point(366, 15)
+        Me.B_FindPrice.Name = "B_FindPrice"
+        Me.B_FindPrice.Size = New System.Drawing.Size(122, 48)
+        Me.B_FindPrice.TabIndex = 0
+        Me.B_FindPrice.Text = "Find Price"
+        Me.B_FindPrice.UseVisualStyleBackColor = False
+        '
+        'B_FindIV
+        '
+        Me.B_FindIV.BackColor = System.Drawing.Color.LightGreen
+        Me.B_FindIV.Location = New System.Drawing.Point(550, 13)
+        Me.B_FindIV.Name = "B_FindIV"
+        Me.B_FindIV.Size = New System.Drawing.Size(122, 48)
+        Me.B_FindIV.TabIndex = 1
+        Me.B_FindIV.Text = "Find IV"
+        Me.B_FindIV.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1780, 1038)
+        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Button1)
@@ -420,7 +456,7 @@ Partial Class Form1
         Me.Text = "Option Calculator V0.1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.ImpliedVol, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Leg1IV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         CType(Me.Leg1OptionPrice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Leg1StrikePrice, System.ComponentModel.ISupportInitialize).EndInit()
@@ -432,6 +468,7 @@ Partial Class Form1
         Me.Panel4.PerformLayout()
         CType(Me.Dividends, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InterestRate, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -460,11 +497,14 @@ Partial Class Form1
     Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents ImpliedVol As NumericUpDown
+    Friend WithEvents Leg1IV As NumericUpDown
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label11 As Label
     Friend WithEvents Dividends As NumericUpDown
     Friend WithEvents InterestRate As NumericUpDown
     Friend WithEvents Label12 As Label
     Friend WithEvents Messages As TextBox
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents B_FindIV As Button
+    Friend WithEvents B_FindPrice As Button
 End Class
