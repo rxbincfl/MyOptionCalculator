@@ -12,7 +12,6 @@ C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\Opti
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.exe
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.pdb
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\bin\Debug\OptionCalculator.xml
-C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.vbprojResolveAssemblyReference.cache
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.Form1.resources
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.Resources.resources
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.vbproj.GenerateResource.Cache
