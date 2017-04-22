@@ -18,3 +18,4 @@ C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\Opti
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.exe
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.xml
 C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.pdb
+C:\Users\rxbin\Documents\GitHub\OptionCalculator\OptionCalculator\obj\Debug\OptionCalculator.vbprojResolveAssemblyReference.cache
